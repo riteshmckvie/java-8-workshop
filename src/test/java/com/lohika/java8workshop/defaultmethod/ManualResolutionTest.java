@@ -1,4 +1,4 @@
-package com.lohika.java8workshop.defaultmethods;
+package com.lohika.java8workshop.defaultmethod;
 
 import org.junit.Test;
 
