@@ -29,6 +29,11 @@ public class Vehicle {
         return type;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public static enum Type {
         CAR, MINIBUS, TRUCK
     }
