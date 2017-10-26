@@ -7,6 +7,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ManualResolutionTest {
 
+    /**
+     * The test demonstrates explicit manual resolution of ambiguous default method. This
+     * is used after applying two previous resolution rules (Classes always win,
+     * sub-interfaces win) still give ambiguous result.
+     *
+     * While implementing {@code getMessage()} in class D, the
+     * explicit method call should be used.
+     */
     @Test
     public void shouldResolveClassImplementationOfDefaultMethod() {
         D obj = new D();

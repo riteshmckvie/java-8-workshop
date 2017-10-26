@@ -50,11 +50,11 @@ public class FunctionalInterfacesTest {
         return result;
     }
 
-    public <T, S> List<S> transform(List<T> source, Function<T, S> transormer) {
+    public <T, S> List<S> transform(List<T> source, Function<T, S> transformer) {
         List<S> result = new ArrayList<>();
 
         for (T s: source) {
-            result.add(transormer.apply(s));
+            result.add(transformer.apply(s));
         }
 
         return result;

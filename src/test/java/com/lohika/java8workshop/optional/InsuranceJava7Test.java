@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class InsuranceNonOptionalTest {
+public class InsuranceJava7Test {
 
     @Test
     public void shouldGetKnownInsurance() {

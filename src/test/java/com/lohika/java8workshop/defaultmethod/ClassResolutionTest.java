@@ -7,6 +7,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ClassResolutionTest {
 
+    /**
+     * The test demonstrates default method resolution rule where method
+     * declaration in the class or a superclass takes priority over any
+     * default method declaration. This rule has highest priority.
+     *
+     * The {@code getMessage()} implemented in class C is used.
+     */
     @Test
     public void shouldResolveClassImplementationOfDefaultMethod() {
         D obj = new D();

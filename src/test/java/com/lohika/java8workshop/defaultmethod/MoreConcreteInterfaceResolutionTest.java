@@ -7,6 +7,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MoreConcreteInterfaceResolutionTest {
 
+    /**
+     * The test demonstrates default method resolution where the method
+     * in the most specific default-providing interface is selected. This
+     * rules has lower priority than 'Classes always win', and higher priority
+     * over manual resolution.
+     *
+     * In this case {@code getMessage()} implemented in B1 is used, as B1 is the
+     * most specific interface.
+     */
     @Test
     public void shouldResolveMoreConcreteOfDefaultMethod() {
         D obj = new D();

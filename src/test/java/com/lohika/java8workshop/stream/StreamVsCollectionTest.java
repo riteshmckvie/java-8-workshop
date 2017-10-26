@@ -44,6 +44,7 @@ public class StreamVsCollectionTest {
     public void shouldProcessUsingStreamApi() {
         List<String> powerfulVehiclesNames = FleetFactory.get().stream()
             .filter(v -> v.getCubicCapacity() > 2500)
+            .sorted(Comparator.comparingInt(Vehicle::getCubicCapacity))
             .map(v -> v.getName())
             .collect(toList());
 

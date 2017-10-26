@@ -25,6 +25,7 @@ public class InsuranceOptionalTest {
     @Test
     public void shouldGetUnknownInsurance() {
         Person person = new Person(null);
+
         String insuranceName = getCarInsuranceName(person);
         assertThat(insuranceName, is("unknown"));
     }
