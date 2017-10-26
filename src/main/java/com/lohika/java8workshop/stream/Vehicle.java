@@ -34,7 +34,7 @@ public class Vehicle {
         return name;
     }
 
-    public static enum Type {
+    public enum Type {
         CAR, MINIBUS, TRUCK
     }
 }

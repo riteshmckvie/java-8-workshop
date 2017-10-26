@@ -10,6 +10,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ReducingTest {
 
+    /**
+     * The test demonstrates how to sum elements of a stream.
+     */
     @Test
     public void shouldFindSumByReduce() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -22,6 +25,9 @@ public class ReducingTest {
         assertThat(sum, is(29200));
     }
 
+    /**
+     * The demonstrates how to find a maximum element in a stream.
+     */
     @Test
     public void shouldFindMaxByReduce() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -33,6 +39,9 @@ public class ReducingTest {
         assertThat(maybeMax.get(), is(5400));
     }
 
+    /**
+     * The demonstrates how to find a minimum element in a stream.
+     */
     @Test
     public void shouldFindMinByReduce() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -44,6 +53,9 @@ public class ReducingTest {
         assertThat(maybeMin.get(), is(1200));
     }
 
+    /**
+     * The demonstrates how to find a total number of elements in a stream.
+     */
     @Test
     public void shouldFindDieselVehicleCountByReduce() {
         List<Vehicle> vehicles = FleetFactory.get();

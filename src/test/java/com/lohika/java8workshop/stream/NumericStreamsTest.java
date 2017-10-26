@@ -10,6 +10,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class NumericStreamsTest {
 
+    /**
+     * The test demonstrates how to find a sum of elements of a numeric stream
+     */
     @Test
     public void shouldFindSumUsingNumericStream() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -21,6 +24,9 @@ public class NumericStreamsTest {
         assertThat(sum, is(29200));
     }
 
+    /**
+     * The test demonstrates a stream from a range of elements.
+     */
     @Test
     public void shouldUseRangeToCreateAStream() {
         long count = IntStream.range(0, 100)

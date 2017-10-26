@@ -13,6 +13,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class StreamVsCollectionTest {
 
+    /**
+     * The test demonstrates how filtering, sorting and mapping is implemented
+     * using Java 7 or earlier.
+     */
     @Test
     public void shouldProcessUsingCollectionApi() {
         List<Vehicle> fleet = FleetFactory.get();
@@ -40,6 +44,10 @@ public class StreamVsCollectionTest {
         assertThat(powerfulVehiclesNames.size(), is(5));
     }
 
+    /**
+     * The test demonstrates how filtering, sorting and mapping is implemented
+     * using Java 8 Streams.
+     */
     @Test
     public void shouldProcessUsingStreamApi() {
         List<String> powerfulVehiclesNames = FleetFactory.get().stream()

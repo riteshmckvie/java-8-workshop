@@ -22,6 +22,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ReducingTest {
 
+    /**
+     * The test demonstrates how to count number of elements in a stream
+     * using {@code Collector}.
+     */
     @Test
     public void shouldCountVehicles() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -32,6 +36,10 @@ public class ReducingTest {
         assertThat(total, is(10L));
     }
 
+    /**
+     * The test demonstrates how to find maximum element in a stream
+     * using {@code Collector}.
+     */
     @Test
     public void shouldFindVehicleWithMaximumCC() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -43,6 +51,10 @@ public class ReducingTest {
         assertThat(maxCC.get().getCubicCapacity(), is(5400));
     }
 
+    /**
+     * The test demonstrates how to find minimum element in a stream
+     * using {@code Collector}.
+     */
     @Test
     public void shouldFindVehicleWithMinimumCC() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -54,6 +66,10 @@ public class ReducingTest {
         assertThat(maxCC.get().getCubicCapacity(), is(1200));
     }
 
+    /**
+     * The test demonstrates how to find an average element in a stream
+     * using {@code Collector}.
+     */
     @Test
     public void shouldFindAverageCC() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -64,6 +80,10 @@ public class ReducingTest {
         assertThat(averageCC, is(2920.0));
     }
 
+    /**
+     * The test demonstrates how to find elements total in a stream
+     * using {@code Collector}.
+     */
     @Test
     public void shouldFindTotalCC() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -74,6 +94,10 @@ public class ReducingTest {
         assertThat(totalCC, is(29200));
     }
 
+    /**
+     * The test demonstrates how to find count, maximum, minimum, average and total
+     * using one call to {@code Collector}.
+     */
     @Test
     public void shouldShowStatistics() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -88,6 +112,9 @@ public class ReducingTest {
         assertThat(statistics.getSum(), is(29200L));
     }
 
+    /**
+     * The test demonstrates how join a stream using {@code Collector}
+     */
     @Test
     public void shouldJoinAllVehiclesNames() {
         List<Vehicle> vehicles = FleetFactory.get();

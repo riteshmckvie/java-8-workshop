@@ -15,6 +15,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class PartitioningTest {
 
+    /**
+     * The test demonstrates how to partition a stream using a predicate.
+     */
     @Test
     public void shouldPartitionByFuelType() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -28,6 +31,9 @@ public class PartitioningTest {
         System.out.println(fleetByFuelType);
     }
 
+    /**
+     * The test demonstrates how to partition a stream using multiple criteria.
+     */
     @Test
     public void shouldPartitionByFuelTypeAndCount() {
         List<Vehicle> vehicles = FleetFactory.get();

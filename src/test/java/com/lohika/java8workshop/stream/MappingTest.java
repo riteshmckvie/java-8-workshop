@@ -11,6 +11,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MappingTest {
 
+    /**
+     * The test demonstrates how to map a stream to another stream of
+     * different elements.
+     */
     @Test
     public void shouldMapTypes() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -24,6 +28,10 @@ public class MappingTest {
         assertThat(types.size(), is(3));
     }
 
+    /**
+     * The test demonstrates how to use a flatMap function to merge multiple
+     * streams into one stream.
+     */
     @Test
     public void shouldFlatMapStreams() {
         List<Vehicle> vehicles = FleetFactory.get();

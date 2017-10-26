@@ -10,6 +10,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SlicingTest {
 
+    /**
+     * The test demonstrates how a stream elements number could be limited.
+     */
     @Test
     public void shouldLimitStream() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -22,6 +25,9 @@ public class SlicingTest {
         assertThat(petrol.size(), is(3));
     }
 
+    /**
+     * The demonstrates how to skip first N elements of a stream.
+     */
     @Test
     public void shouldSkipEverything() {
         List<Vehicle> vehicles = FleetFactory.get();

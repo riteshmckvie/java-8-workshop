@@ -64,7 +64,7 @@ With default methods there is a possibility to inherit more that one method with
 3. If the choice is still ambiguous, the class has to explicitly select which default method to use.
 [Example](src/test/java/com/lohika/java8workshop/defaultmethod/ManualResolutionTest.java)
 
-### Optionals
+## Optionals
 Java 8 comes with *java.util.Optional<T>* to wrap null return values and avoid NullPointerException (the most common
 exception). Inventing of null is called
 [a billion-dollar mistake](https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/) by its inventor.
@@ -78,3 +78,44 @@ can understand the intention of the method.
 
 *java.util.Optional* supports methods for filtering, combining and flow controls methods:
 [Optional examples](src/test/java/com/lohika/java8workshop/optional/OptionalMethodsTest.java)
+
+##Streams
+Streams are an update to Java API that lets you manipulate collections of data in a declarative way.
+
+* Declarative - what to do (Streams).
+* Imperative - how to do using loops and ifs (Collections).
+
+[Streams vs Collections](src/test/java/com/lohika/java8workshop/stream/StreamVsCollectionTest.java)
+
+**Stream** - a sequence of elements from a source that supports data processing operations.
+
+Streams:
+* Are fixed structures (you can’t add or remove elements) whose elements are computed on demand (computed only when needed).
+* Are traversable only once.
+* Use internal iteration (the iteration is hidden, user just states what has to be done).
+
+[Examples](src/test/java/com/lohika/java8workshop/stream/StreamsFeaturesTest.java)
+
+Streams have two types of operations:
+* Intermediate (filter, map, flatMap, limit, skip, etc…). Those operations allow pipelining. Intermediate operations
+don’t perform any processing until terminal operation is invoked.
+* Terminal operations (collect, reduce, forEach, count).
+
+Some operations are short-circuiting: a processing stops as soon as a result is found. Those operations are: skip, limit, findFirst, findAny, anyMatch.
+
+Basically, working with streams involves three items:
+* A data source.
+* A chain of intermediate operations.
+* A terminal operation.
+
+Streams examples:
+* [Filtering](src/test/java/com/lohika/java8workshop/stream/FilteringTest.java)
+* [Slicing](src/test/java/com/lohika/java8workshop/stream/SlicingTest.java)
+* [Mapping](src/test/java/com/lohika/java8workshop/stream/MappingTest.java)
+* [Finding and Matching](src/test/java/com/lohika/java8workshop/stream/FindingMatchingTest.java)
+* [Reducing](src/test/java/com/lohika/java8workshop/stream/ReducingTest.java)
+* [Numeric Streams](src/test/java/com/lohika/java8workshop/stream/NumericStreamsTest.java)
+* [Building Streams](src/test/java/com/lohika/java8workshop/stream/BuildingStreamsTest.java)
+* [Reducing with Collectors](src/test/java/com/lohika/java8workshop/stream/collector/ReducingTest.java)
+* [Grouping](src/test/java/com/lohika/java8workshop/stream/collector/GroupingTest.java)
+* [Partitioning](src/test/java/com/lohika/java8workshop/stream/collector/PartitioningTest.java)

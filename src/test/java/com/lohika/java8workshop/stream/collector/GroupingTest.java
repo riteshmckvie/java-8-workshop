@@ -17,6 +17,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GroupingTest {
 
+    /**
+     * The test demonstrates how to group a stream using a criteria function.
+     */
     @Test
     public void shouldGroupByType() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -31,6 +34,9 @@ public class GroupingTest {
         System.out.println(fleetByTypes);
     }
 
+    /**
+     * The test demonstrates how to group a stream using a multiple criteria functions.
+     */
     @Test
     public void shouldGroupByTypeAndFuelType() {
         List<Vehicle> vehicles = FleetFactory.get();
@@ -45,6 +51,10 @@ public class GroupingTest {
         System.out.println(fleetByTypeAndFuelType);
     }
 
+    /**
+     * The test demonstrates how to find an element in each group which is maximum
+     * by provided {@code Comparator}.
+     */
     @Test
     public void shouldGroupByTypeAndFindTheMostPowerful() {
         List<Vehicle> vehicles = FleetFactory.get();
