@@ -20,6 +20,9 @@ public class LambdaFirstShotTest {
         source = Arrays.asList("Ukraine", "Great Britain", "USA", "France", "Germany");
     }
 
+    /**
+     * The test demonstrates how the sorting is implemented using Java 7 or earlier.
+     */
     @Test
     public void shouldSortUsingAnonymousClass() {
         source.sort(new Comparator<String>() {
@@ -31,6 +34,9 @@ public class LambdaFirstShotTest {
         assertThat(source, is(sorted));
     }
 
+    /**
+     * The test demonstrates how the sorting can be implemented using Java 8 and lambda method.
+     */
     @Test
     public void shouldSortUsingLambda() {
         source.sort((o1, o2) -> o1.length() - o2.length());
@@ -38,6 +44,9 @@ public class LambdaFirstShotTest {
         assertThat(sorted, is(source));
     }
 
+    /**
+     * The test demonstrates how the sorting can be implemented using Java 8 and method reference.
+     */
     @Test
     public void shouldSortUsingComparingInt() {
         source.sort(Comparator.comparingInt(String::length));

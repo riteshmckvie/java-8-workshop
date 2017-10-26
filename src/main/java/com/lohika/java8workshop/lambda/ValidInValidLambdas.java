@@ -9,8 +9,10 @@ public class ValidInValidLambdas {
 
 //        () -> {return "Mario";}
 
+//        invalid: no braces
 //        (Integer i) -> return "Alan" + i;
 
+//        invalid: no return keyword
 //        (String s) -> {"Iron Man";}
     }
 

@@ -17,6 +17,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MethodReferencesTest {
 
+    /**
+     * The test demonstrates how to use a reference to static method.
+     */
     @Test
     public void shouldShowStaticMethodReference() {
         IntBinaryOperator operator;
@@ -28,6 +31,9 @@ public class MethodReferencesTest {
         assertThat(operator.applyAsInt(1,2), is(1));
     }
 
+    /**
+     * The test demonstrates how to use a reference to non-static method.
+     */
     @Test
     public void shouldShowNonStaticMethodReference() {
         BiFunction<String, String, String> function;
@@ -38,6 +44,9 @@ public class MethodReferencesTest {
         assertThat(function.apply("tail", "-head"), is("tail-head"));
     }
 
+    /**
+     * The test demonstrates how to use a reference to object instance method.
+     */
     @Test
     public void shouldShowInstanceMethodReference() {
         Function<String, String> function;
@@ -49,6 +58,9 @@ public class MethodReferencesTest {
         assertThat(function.apply("-head"), is("tail-head"));
     }
 
+    /**
+     * The test demonstrates how to use a reference to constructor.
+     */
     @Test
     public void shouldShowConstructorMethodReference() {
         Supplier<List> supplier;

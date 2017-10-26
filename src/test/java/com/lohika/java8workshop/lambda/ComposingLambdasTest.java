@@ -20,6 +20,9 @@ public class ComposingLambdasTest {
         source = Arrays.asList("Ukraine", "Great Britain", "USA", "France", "Germany");
     }
 
+    /**
+     * The test demonstrates how to sort a list by reversed order of the length of its elements.
+     */
     @Test
     public void shouldSortInReverseOrder() {
         source.sort(comparing(String::length).reversed());
@@ -27,6 +30,10 @@ public class ComposingLambdasTest {
         assertThat(source, is(Arrays.asList("Great Britain", "Ukraine", "Germany", "France", "USA")));
     }
 
+    /**
+     * The test demonstrates how to sort a list by reversed order of the length of its elements, and the length
+     * is equals then sort by case-insensitive natural order.
+     */
     @Test
     public void shouldSortWithComposedComparator() {
         source.sort(comparing(String::length)
@@ -41,6 +48,9 @@ public class ComposingLambdasTest {
         // Will be shown during streams presentation.
     }
 
+    /**
+     * The test demonstrates how to create and use compound function, which will execute two operations.
+     */
     @Test
     public void shouldComposeFunctions() {
         IntUnaryOperator f1 = x -> x + 1;
