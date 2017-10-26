@@ -11,11 +11,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class OptionalMethodsTest {
 
+    /**
+     * The test demonstrates creating {@code Optional.of} with {@code null} value.
+     */
     @Test(expected = NullPointerException.class)
     public void shouldShowNullPointerOnInitialization() {
         Optional<String> maybeString = Optional.of(null);
     }
 
+    /**
+     * The test demonstrates calling {@code Optional.get} on {@code Optional} with
+     * absent value.
+     */
     @Test(expected = NoSuchElementException.class)
     public void shouldShowNullPointerOnGet() {
         Optional<String> maybeString = Optional.ofNullable(null);
@@ -23,6 +30,10 @@ public class OptionalMethodsTest {
         String value = maybeString.get();
     }
 
+    /**
+     * The test demonstrates calling {@code Optional.orElseThrow} on {@code Optional} with
+     * absent value and throwing different {@code Exception}.
+     */
     @Test(expected = NullPointerException.class)
     public void shouldOrElseThrow() {
         Optional<String> maybeString = Optional.ofNullable(null);
@@ -30,6 +41,10 @@ public class OptionalMethodsTest {
         String value = maybeString.orElseThrow(NullPointerException::new);
     }
 
+    /**
+     * The test demonstrates calling {@code Optional.orElseGet} on {@code Optional} with
+     * absent value.
+     */
     @Test
     public void shouldOrElseGet() {
         Optional<String> maybeString = Optional.ofNullable(null);
@@ -46,6 +61,9 @@ public class OptionalMethodsTest {
         assertThat(value, is("this took long to execute"));
     }
 
+    /**
+     * The test demonstrates {@code Optional} filtering.
+     */
     @Test
     public void shouldShowFilterUsage() {
         Insurance insurance = new Insurance("super-insurance");
@@ -56,6 +74,10 @@ public class OptionalMethodsTest {
             .ifPresent(ins -> System.out.println("This is super-insurance"));
     }
 
+    /**
+     * The test demonstrates {@code Optional.orElse} usage with empty and
+     * not empty {@code Optional}.
+     */
     @Test
     public void shouldShowOrElseUsage() {
         Optional<String> maybeName = Optional.empty();

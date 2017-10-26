@@ -12,12 +12,12 @@ public class InsuranceJava7Test {
 
     @Test
     public void shouldGetKnownInsurance() {
-        Insurance insurance = new Insurance("super-insurance");
+        Insurance insurance = new Insurance("known-insurance");
         Car car = new Car(insurance);
         Person person = new Person(car);
 
         String insuranceName = getCarInsuranceName(person);
-        assertThat(insuranceName, is("super-insurance"));
+        assertThat(insuranceName, is("known-insurance"));
     }
 
     @Test
@@ -28,6 +28,10 @@ public class InsuranceJava7Test {
         assertThat(insuranceName, is("unknown"));
     }
 
+    /**
+     * Returns car insurance for provided person using Java 7 or earlier.
+     * @return "unknown" returned if insurance could not be retrieved.
+     */
     private static String getCarInsuranceName(Person person) {
         if (person != null) {
             Car car = person.getCar();

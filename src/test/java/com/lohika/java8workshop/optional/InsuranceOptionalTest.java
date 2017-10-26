@@ -30,6 +30,10 @@ public class InsuranceOptionalTest {
         assertThat(insuranceName, is("unknown"));
     }
 
+    /**
+     * Returns car insurance for provided person using Java 8.
+     * @return "unknown" returned if insurance could not be retrieved.
+     */
     private static String getCarInsuranceName(Person person) {
         Optional<Person> optPerson = Optional.ofNullable(person);
 

@@ -4,13 +4,14 @@ Lambda expression is concise representation of any anonymous function that can b
 Lambda technically don’t let you anything that you couldn’t do prior to Java 8. But you no longer have to write clumsy code using anonymous classes.
 [Java 7 vs Java 8 example](src/test/java/com/lohika/java8workshop/lambda/LambdaFirstShotTest.java)
 
-[Lambda structure](src/main/resources/lambda.png "Lambda Expression Structure")
+![Lambda structure](src/main/resources/lambda.png "Lambda Expression Structure")
 
 * A list of parameters - in this case it mirrors the parameters of the compareTo method of Comparator.
 * An arrow - the arrow -> separates the list of parameters from body of the lambda
 * The body of the lambda - it this case it’s considered as the lambda’s return value
 
 [Lambdas examples](src/main/java/com/lohika/java8workshop/lambda/LambdaExamples.java)
+
 [Valid and invalid lambdas](src/main/java/com/lohika/java8workshop/lambda/ValidInValidLambdas.java)
 
 ### Lambda’s syntax rules
@@ -62,3 +63,18 @@ With default methods there is a possibility to inherit more that one method with
 [Example](src/test/java/com/lohika/java8workshop/defaultmethod/MoreConcreteInterfaceResolutionTest.java)
 3. If the choice is still ambiguous, the class has to explicitly select which default method to use.
 [Example](src/test/java/com/lohika/java8workshop/defaultmethod/ManualResolutionTest.java)
+
+### Optionals
+Java 8 comes with *java.util.Optional<T>* to wrap null return values and avoid NullPointerException (the most common
+exception). Inventing of null is called
+[a billion-dollar mistake](https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/) by its inventor.
+
+Using Optional can help to design better APIs in which, just by reading the signature of a method, users
+can understand the intention of the method.
+
+[Java 7 and earlier example of dealing with nested objects](src/test/java/com/lohika/java8workshop/optional/InsuranceJava7Test.java)
+
+[and Java 8 example](src/test/java/com/lohika/java8workshop/optional/InsuranceOptionalTest.java)
+
+*java.util.Optional* supports methods for filtering, combining and flow controls methods:
+[Optional examples](src/test/java/com/lohika/java8workshop/optional/OptionalMethodsTest.java)
