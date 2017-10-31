@@ -119,3 +119,33 @@ Streams examples:
 * [Reducing with Collectors](src/test/java/com/lohika/java8workshop/stream/collector/ReducingTest.java)
 * [Grouping](src/test/java/com/lohika/java8workshop/stream/collector/GroupingTest.java)
 * [Partitioning](src/test/java/com/lohika/java8workshop/stream/collector/PartitioningTest.java)
+
+## New Date and Time API
+The old *java.util.Date* class and all other classes used to model date and time in Java before Java 8 have 
+many inconsistencies and design flaws, including their mutability and some poorly chosen offsets, default and naming.
+
+The new Date/Time API Java API integrates many of the Joda-Time features.
+
+The basic DateTime API class hierarchy:
+
+Temporal (specific point of time) [Examples](src/test/java/com/lohika/java8workshop/datetime/TemporalTest.java):
+* LocalDate - a plain date without time of day and a timezone.
+* LocalTime - time of day without date and a timezone.
+* LocalDateTime - time and date without a timezone.
+* ZonedDateTime - time, date and timezone.
+* Instant - the number of nanoseconds since the UNIX epoch time (00:00:00 Jan 1, 1970 UTC)
+
+TemporalAmount (duration between temporals) [Examples](src/test/java/com/lohika/java8workshop/datetime/TemporalAmountTest.java):
+* Duration - an amount of time measured in seconds and nanoseconds.
+* Period - an amount of time measured in years, months, and days.
+
+### TemporalAdjusters
+Are used for performing more advanced operations, such as adjusting a date to the next Monday, the next working day, or the last day of the month. In such cases one can pass to an overloaded version of the with method with TemporalAdjuster.
+[Examples](src/test/java/com/lohika/java8workshop/datetime/TemporalAdjustersTest.java)
+
+### Formatting and Parsing
+The base class is DateTimeFormatter. It’s a thread-safe class.
+[Examples](src/test/java/com/lohika/java8workshop/datetime/FormattingAndParsingTest.java)
+
+### Working with different time zones
+The new java.time.ZoneId class is the replacement for the old java.util.TimeZone. It aims to better shield one from the complexities related to time zones, such as dealing with Daylight Saving Time.Tem
