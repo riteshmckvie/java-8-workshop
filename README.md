@@ -1,3 +1,6 @@
+# Java 8 Briefly
+The aim of this repository is to show some of the most important improvements in Java 8.
+
 ## Lambda Expressions
 Lambda expression is concise representation of any anonymous function that can be passed around.
 
@@ -148,4 +151,14 @@ The base class is DateTimeFormatter. It’s a thread-safe class.
 [Examples](src/test/java/com/lohika/java8workshop/datetime/FormattingAndParsingTest.java)
 
 ### Working with different time zones
-The new java.time.ZoneId class is the replacement for the old java.util.TimeZone. It aims to better shield one from the complexities related to time zones, such as dealing with Daylight Saving Time.Tem
+The new java.time.ZoneId class is the replacement for the old java.util.TimeZone. It aims to better shield one from the complexities related to time zones, such as dealing with Daylight Saving Time.
+
+## Practicing
+To practice covered topics one could solve following problems:
+* [Task1](src/test/java/com/lohika/java8workshop/hometask/Task1.java)
+* [Task2](src/test/java/com/lohika/java8workshop/hometask/Task2.java)
+* [Task3](src/test/java/com/lohika/java8workshop/hometask/Task3.java)
+* [Task4](src/test/java/com/lohika/java8workshop/hometask/Task4.java)
+* [Task5](src/test/java/com/lohika/java8workshop/hometask/Task5.java)
+* [Task6](src/test/java/com/lohika/java8workshop/hometask/Task6.java)
+* [Task7](src/test/java/com/lohika/java8workshop/hometask/Task7.java)

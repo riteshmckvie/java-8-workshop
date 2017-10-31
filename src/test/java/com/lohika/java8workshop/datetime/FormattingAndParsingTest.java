@@ -16,6 +16,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class FormattingAndParsingTest {
 
+    /**
+     * The test demonstrates how to format a date using predefined and custom format.
+     */
     @Test
     public void shouldFormatDate() {
         LocalDateTime dateTime = LocalDateTime.of(2017, 6, 1, 4, 53, 47);
@@ -31,6 +34,9 @@ public class FormattingAndParsingTest {
         assertThat(localDateTime, is("01 juin 2017"));
     }
 
+    /**
+     * The test demonstrates how to parse a date using custom formatter.
+     */
     @Test
     public void shouldParseDate() {
         DateTimeFormatter localizedFormat = DateTimeFormatter.ofPattern("dd MMM yyyy", Locale.FRANCE);
