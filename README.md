@@ -82,7 +82,7 @@ can understand the intention of the method.
 *java.util.Optional* supports methods for filtering, combining and flow controls methods:
 [Optional examples](src/test/java/com/lohika/java8workshop/optional/OptionalMethodsTest.java)
 
-##Streams
+## Streams
 Streams are an update to Java API that lets you manipulate collections of data in a declarative way.
 
 * Declarative - what to do (Streams).
