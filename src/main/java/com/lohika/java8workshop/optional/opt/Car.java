@@ -5,7 +5,7 @@ import com.lohika.java8workshop.optional.Insurance;
 import java.util.Optional;
 
 public class Car {
-    private Optional<Insurance> insurance;
+    private final Optional<Insurance> insurance;
 
     public Car(final Insurance insurance) {
         this.insurance = Optional.ofNullable(insurance);

@@ -48,7 +48,7 @@ public class FunctionalInterfacesTest {
         countries.forEach(s -> System.out.println(s.toUpperCase()));
     }
 
-    private <T> List<T> filter(List<T> source, Predicate predicate) {
+    private <T> List<T> filter(List<T> source, Predicate<T> predicate) {
         List<T> result = new ArrayList<>();
 
         for (T s: source) {

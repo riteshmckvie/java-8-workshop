@@ -11,7 +11,7 @@ Lambda technically don’t let you anything that you couldn’t do prior to Java
 
 * A list of parameters - in this case it mirrors the parameters of the compareTo method of Comparator.
 * An arrow - the arrow -> separates the list of parameters from body of the lambda
-* The body of the lambda - it this case it’s considered as the lambda’s return value
+* The body of the lambda - in this case it’s considered as the lambda’s return value
 
 [Lambdas examples](src/main/java/com/lohika/java8workshop/lambda/LambdaExamples.java)
 
@@ -24,7 +24,7 @@ Lambda technically don’t let you anything that you couldn’t do prior to Java
 * The return keyword is optional if you have simple expression that returns a value.
 
 ### Functional Interfaces
-It’s an interface that specifies exactly one abstract method (multiple default method allowed).
+It’s an interface that specifies exactly one abstract method (multiple [default method](##Default Methods) allowed).
 [Example](src/main/java/com/lohika/java8workshop/lambda/FunctionalInterfaces.java)
 
 The signature of abstract method of a functional interface, is called a **functional descriptor**. So in order to use
@@ -127,7 +127,7 @@ Streams examples:
 The old *java.util.Date* class and all other classes used to model date and time in Java before Java 8 have 
 many inconsistencies and design flaws, including their mutability and some poorly chosen offsets, default and naming.
 
-The new Date/Time API Java API integrates many of the Joda-Time features.
+The new Date/Time Java API integrates many of the Joda-Time features.
 
 The basic DateTime API class hierarchy:
 
@@ -143,7 +143,8 @@ TemporalAmount (duration between temporals) [Examples](src/test/java/com/lohika/
 * Period - an amount of time measured in years, months, and days.
 
 ### TemporalAdjusters
-Are used for performing more advanced operations, such as adjusting a date to the next Monday, the next working day, or the last day of the month. In such cases one can pass to an overloaded version of the with method with TemporalAdjuster.
+Are used for performing more advanced operations, such as adjusting a date to the next Monday, the next working day, or the last day of the month.
+In such cases one can pass to an overloaded version of the **with** method with TemporalAdjuster.
 [Examples](src/test/java/com/lohika/java8workshop/datetime/TemporalAdjustersTest.java)
 
 ### Formatting and Parsing
@@ -151,14 +152,16 @@ The base class is DateTimeFormatter. It’s a thread-safe class.
 [Examples](src/test/java/com/lohika/java8workshop/datetime/FormattingAndParsingTest.java)
 
 ### Working with different time zones
-The new java.time.ZoneId class is the replacement for the old java.util.TimeZone. It aims to better shield one from the complexities related to time zones, such as dealing with Daylight Saving Time.
+The new java.time.ZoneId class is the replacement for the old java.util.TimeZone. It aims to better shield one from
+the complexities related to time zones, such as dealing with Daylight Saving Time.
 
 ## Practicing
-To practice covered topics one could solve following problems:
-* [Task1](src/test/java/com/lohika/java8workshop/hometask/Task1.java)
-* [Task2](src/test/java/com/lohika/java8workshop/hometask/Task2.java)
-* [Task3](src/test/java/com/lohika/java8workshop/hometask/Task3.java)
-* [Task4](src/test/java/com/lohika/java8workshop/hometask/Task4.java)
-* [Task5](src/test/java/com/lohika/java8workshop/hometask/Task5.java)
-* [Task6](src/test/java/com/lohika/java8workshop/hometask/Task6.java)
-* [Task7](src/test/java/com/lohika/java8workshop/hometask/Task7.java)
+Imaging there is some list of transactions. Each transaction has: id, description, type, date and total.
+To practice covered topics one could solve following tasks:
+* [Filter transactions](src/test/java/com/lohika/java8workshop/hometask/Task1.java)
+* [Sort transactions](src/test/java/com/lohika/java8workshop/hometask/Task2.java)
+* [Calculate transactions total](src/test/java/com/lohika/java8workshop/hometask/Task3.java)
+* [Find the most expensive transaction in each category](src/test/java/com/lohika/java8workshop/hometask/Task4.java)
+* [Calculate the total count of transactions in each category](src/test/java/com/lohika/java8workshop/hometask/Task5.java)
+* [Find the most popular item](src/test/java/com/lohika/java8workshop/hometask/Task6.java)
+* [Calculate total amount of transactions for each month](src/test/java/com/lohika/java8workshop/hometask/Task7.java)

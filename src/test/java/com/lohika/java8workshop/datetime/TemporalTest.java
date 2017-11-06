@@ -79,7 +79,7 @@ public class TemporalTest {
     }
 
     /**
-     * The test demonstrates LocalZonedDateTime usage.
+     * The test demonstrates ZonedDateTime usage.
      */
     @Test
     public void shouldShowZonedDateTime() {

@@ -12,7 +12,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
- * Find total of all transactions.
+ * Calculate total of all transactions.
  */
 public class Task3 {
 

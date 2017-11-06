@@ -26,6 +26,13 @@ public class Task6 {
         assertThat(max.getValue(), is(3L));
     }
 
+    /**
+     * The most popular item is the item occurred most times in transaction description.
+     * In the following examples 'Fruits' is the most popular item:
+     *  transaction1(..., 'Fruits Cookies Vegetables', ...)
+     *  transaction2(..., 'Fruits', ...)
+     *  transaction3(..., 'Candies', ...)
+     */
     private Map.Entry<String, Long> mostPopularItem(final List<Transaction> transactions) {
         // Your implementation goes here
         return null;

@@ -46,14 +46,10 @@ public class StreamsFeaturesTest {
     @Test
     public void shouldShowIntermediateOperationsMerging() {
         FleetFactory.get().stream()
-            .filter(v -> {
-                System.out.println("Filtering: \t" + v.getName());
-                return v.getCubicCapacity() > 2500;
-            })
-            .map(v -> {
-                System.out.println("Mapping: \t" + v.getName());
-                return v.getName();
-            })
+            .peek(v -> System.out.println("Filtering: \t" + v.getName()))
+            .filter(v -> v.getCubicCapacity() > 2500)
+            .peek(v -> System.out.println("Mapping: \t" + v.getName()))
+            .map(v -> v.getName())
             .collect(toList());
     }
 }

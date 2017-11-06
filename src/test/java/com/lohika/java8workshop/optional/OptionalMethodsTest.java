@@ -34,12 +34,14 @@ public class OptionalMethodsTest {
      * The test demonstrates calling {@code Optional.orElseThrow} on {@code Optional} with
      * absent value and throwing different {@code Exception}.
      */
-    @Test(expected = NullPointerException.class)
-    public void shouldOrElseThrow() {
+    @Test(expected = CustomException.class)
+    public void shouldOrElseThrow() throws CustomException {
         Optional<String> maybeString = Optional.ofNullable(null);
 
-        String value = maybeString.orElseThrow(NullPointerException::new);
+        String value = maybeString.orElseThrow(CustomException::new);
     }
+
+    private static class CustomException extends Exception {}
 
     /**
      * The test demonstrates calling {@code Optional.orElseGet} on {@code Optional} with
@@ -49,16 +51,18 @@ public class OptionalMethodsTest {
     public void shouldOrElseGet() {
         Optional<String> maybeString = Optional.ofNullable(null);
 
-        String value = maybeString.orElseGet(() -> {
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            return "this took long to execute";
-        });
+        String value = maybeString.orElseGet(this::longComputationOfString);
 
         assertThat(value, is("this took long to execute"));
+    }
+
+    private String longComputationOfString() {
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "this took long to execute";
     }
 
     /**
@@ -69,6 +73,7 @@ public class OptionalMethodsTest {
         Insurance insurance = new Insurance("super-insurance");
         Optional<Insurance> maybeInsurance = Optional.of(insurance);
 
+        assertThat(maybeInsurance.isPresent(), is(true));
         maybeInsurance
             .filter(ins -> "super-insurance".equals(ins.getName()))
             .ifPresent(ins -> System.out.println("This is super-insurance"));

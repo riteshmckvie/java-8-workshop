@@ -1,19 +1,21 @@
 package com.lohika.java8workshop.lambda;
 
+import java.util.function.Supplier;
+
 public class ValidInValidLambdas {
 
     public static void main(String[] args) {
-//        () -> {}
+        Runnable runnable = () -> {};
 
-//        () -> "Raoul"
+        Supplier<String> supplierShort = () -> "Raoul";
 
-//        () -> {return "Mario";}
+        Supplier<String> supplierLong = () -> {return "Mario";};
 
-//        invalid: no braces
-//        (Integer i) -> return "Alan" + i;
+        // invalid: no braces
+//        Function<Integer, String> concat = (Integer i) -> return "Alan" + i;
 
-//        invalid: no return keyword
-//        (String s) -> {"Iron Man";}
+        // invalid: no return keyword
+//        Function<String, String> process = (String s) -> {"Iron Man";}
     }
 
 }

@@ -1,7 +1,7 @@
 package com.lohika.java8workshop.optional;
 
 public class Insurance {
-    private String name;
+    private final String name;
 
     public Insurance(final String name) {
         this.name = name;
