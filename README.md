@@ -1,6 +1,13 @@
 # Java 8 Briefly
 The aim of this repository is to show some of the most important improvements in Java 8.
 
+Following topics will be covered:
+* [Lambda Expressions](#lambda-expressions)
+* [Default Methods](#default-methods)
+* [Optionals](#optionals)
+* [Streams](#streams)
+* [New Date/Time API](#new-date-and-time-api)
+
 ## Lambda Expressions
 Lambda expression is a concise representation of any anonymous function that can be passed around.
 
