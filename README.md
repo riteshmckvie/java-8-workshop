@@ -24,7 +24,7 @@ Lambda technically don’t let you do anything that you couldn’t do prior to J
 * The return keyword is optional if you have simple expression that returns a value.
 
 ### Functional Interfaces
-It’s an interface that specifies exactly one abstract method (multiple [default method](##default methods) allowed).
+It’s an interface that specifies exactly one abstract method (multiple [default method](##default-methods) allowed).
 [Example](src/main/java/com/lohika/java8workshop/lambda/FunctionalInterfaces.java)
 
 The signature of abstract method of a functional interface, is called a **functional descriptor**. So in order to use
