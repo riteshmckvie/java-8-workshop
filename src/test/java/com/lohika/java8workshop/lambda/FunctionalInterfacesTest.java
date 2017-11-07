@@ -27,27 +27,6 @@ public class FunctionalInterfacesTest {
         assertThat(filtered, is(Arrays.asList("Germany", "Great Britain")));
     }
 
-    /**
-     * The test demonstrates how to use a function to object transformation.
-     */
-    @Test
-    public void shouldShowFunctionUsage() {
-        Function<String, Integer> toLength = s -> s.length();
-
-        List<Integer> lengths = transform(countries, toLength);
-
-        assertThat(lengths, is(Arrays.asList(3, 6, 7, 7, 13)));
-    }
-
-    /**
-     * The test demonstrates how to use a consumer for applying some
-     * logic to each elements of a list.
-     */
-    @Test
-    public void shouldShowConsumerUsage() {
-        countries.forEach(s -> System.out.println(s.toUpperCase()));
-    }
-
     private <T> List<T> filter(List<T> source, Predicate<T> predicate) {
         List<T> result = new ArrayList<>();
 
@@ -60,6 +39,18 @@ public class FunctionalInterfacesTest {
         return result;
     }
 
+    /**
+     * The test demonstrates how to use a function to object transformation.
+     */
+    @Test
+    public void shouldShowFunctionUsage() {
+        Function<String, Integer> toLength = s -> s.length();
+
+        List<Integer> lengths = transform(countries, toLength);
+
+        assertThat(lengths, is(Arrays.asList(3, 6, 7, 7, 13)));
+    }
+
     private <T, S> List<S> transform(List<T> source, Function<T, S> transformer) {
         List<S> result = new ArrayList<>();
 
@@ -68,6 +59,15 @@ public class FunctionalInterfacesTest {
         }
 
         return result;
+    }
+
+    /**
+     * The test demonstrates how to use a consumer for applying some
+     * logic to each elements of a list.
+     */
+    @Test
+    public void shouldShowConsumerUsage() {
+        countries.forEach(s -> System.out.println(s.toUpperCase()));
     }
 
 }

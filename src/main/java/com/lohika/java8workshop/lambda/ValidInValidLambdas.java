@@ -7,15 +7,15 @@ public class ValidInValidLambdas {
     public static void main(String[] args) {
         Runnable runnable = () -> {};
 
-        Supplier<String> supplierShort = () -> "Raoul";
+        Supplier<String> supplierShort = () -> "This is lambda";
 
-        Supplier<String> supplierLong = () -> {return "Mario";};
+        Supplier<String> supplierLong = () -> {return "This is lambda";};
 
         // invalid: no braces
-//        Function<Integer, String> concat = (Integer i) -> return "Alan" + i;
+//        Function<Integer, String> concat = (Integer i) -> return "Lambda #" + i;
 
         // invalid: no return keyword
-//        Function<String, String> process = (String s) -> {"Iron Man";}
+//        Function<String, String> process = (String s) -> {"Java 8";}
     }
 
 }

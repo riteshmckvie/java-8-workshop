@@ -26,6 +26,7 @@ public class LambdaFirstShotTest {
     @Test
     public void shouldSortUsingAnonymousClass() {
         source.sort(new Comparator<String>() {
+            @Override
             public int compare(final String o1, final String o2) {
                 return o1.length() - o2.length();
             }

@@ -17,10 +17,8 @@ public class StreamsFeaturesTest {
     @Test
     public void shouldShowStreamLaziness() {
         long count = FleetFactory.get().stream()
-            .map(v -> {
-                System.out.println(v.getName());
-                return v.getName();
-            })
+            .peek(v -> System.out.println(v.getName()))
+            .map(v -> v.getName())
             .limit(3)
             .count();
 

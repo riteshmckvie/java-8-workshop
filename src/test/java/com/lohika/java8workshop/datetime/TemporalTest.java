@@ -72,7 +72,7 @@ public class TemporalTest {
      * The test demonstrates getting non-existent ChronoField on Instant.
      */
     @Test(expected = UnsupportedTemporalTypeException.class)
-    public void shouldShowInstance() {
+    public void shouldShowInstant() {
         Instant now = Instant.now();
 
         now.get(ChronoField.MINUTE_OF_DAY);

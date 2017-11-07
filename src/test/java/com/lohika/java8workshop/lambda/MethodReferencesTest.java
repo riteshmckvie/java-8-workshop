@@ -40,6 +40,7 @@ public class MethodReferencesTest {
 
         function = String::concat;
 
+        //"head".concat("-tail");
         assertThat(function.apply("head", "-tail"), is("head-tail"));
         assertThat(function.apply("tail", "-head"), is("tail-head"));
     }

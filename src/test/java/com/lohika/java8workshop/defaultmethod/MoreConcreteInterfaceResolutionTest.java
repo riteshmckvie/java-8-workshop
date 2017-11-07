@@ -43,13 +43,6 @@ public class MoreConcreteInterfaceResolutionTest {
         }
     }
 
-    interface C extends A {
-        @Override
-        default String getMessage() {
-            return "Message from C";
-        }
-    }
-
     class D implements A, B, B1 {
     }
 

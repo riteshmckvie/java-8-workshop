@@ -2,9 +2,9 @@
 The aim of this repository is to show some of the most important improvements in Java 8.
 
 ## Lambda Expressions
-Lambda expression is concise representation of any anonymous function that can be passed around.
+Lambda expression is a concise representation of any anonymous function that can be passed around.
 
-Lambda technically don’t let you anything that you couldn’t do prior to Java 8. But you no longer have to write clumsy code using anonymous classes.
+Lambda technically don’t let you do anything that you couldn’t do prior to Java 8. But you no longer have to write clumsy code using anonymous classes.
 [Java 7 vs Java 8 example](src/test/java/com/lohika/java8workshop/lambda/LambdaFirstShotTest.java)
 
 ![Lambda structure](src/main/resources/lambda.png "Lambda Expression Structure")
@@ -24,7 +24,7 @@ Lambda technically don’t let you anything that you couldn’t do prior to Java
 * The return keyword is optional if you have simple expression that returns a value.
 
 ### Functional Interfaces
-It’s an interface that specifies exactly one abstract method (multiple [default method](##Default Methods) allowed).
+It’s an interface that specifies exactly one abstract method (multiple [default method](##default methods) allowed).
 [Example](src/main/java/com/lohika/java8workshop/lambda/FunctionalInterfaces.java)
 
 The signature of abstract method of a functional interface, is called a **functional descriptor**. So in order to use
