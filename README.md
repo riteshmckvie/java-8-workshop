@@ -20,9 +20,9 @@ Lambda technically don’t let you do anything that you couldn’t do prior to J
 * An arrow - the arrow -> separates the list of parameters from body of the lambda
 * The body of the lambda - in this case it’s considered as the lambda’s return value
 
-[Lambdas examples](src/main/java/com/lohika/java8workshop/lambda/LambdaExamples.java)
+[Lambdas examples](src/main/java/com/lohika/java8/workshop/lambda/LambdaExamples.java)
 
-[Valid and invalid lambdas](src/main/java/com/lohika/java8workshop/lambda/ValidInValidLambdas.java)
+[Valid and invalid lambdas](src/main/java/com/lohika/java8/workshop/lambda/ValidInValidLambdas.java)
 
 ### Lambda’s syntax rules
 * Declaring the types of parameters is optional.
@@ -32,7 +32,7 @@ Lambda technically don’t let you do anything that you couldn’t do prior to J
 
 ### Functional Interfaces
 It’s an interface that specifies exactly one abstract method (multiple [default method](#default-methods) allowed).
-[Example](src/main/java/com/lohika/java8workshop/lambda/FunctionalInterfaces.java)
+[Example](src/main/java/com/lohika/java8/workshop/lambda/FunctionalInterfaces.java)
 
 The signature of abstract method of a functional interface, is called a **functional descriptor**. So in order to use
 different lambda expressions, you need a set of functional interfaces that can describe common function descriptors.
@@ -132,7 +132,7 @@ Streams examples:
 
 ## New Date and Time API
 The old *java.util.Date* class and all other classes used to model date and time in Java before Java 8 have 
-many inconsistencies and design flaws, including their mutability and some poorly chosen offsets, default and naming.
+many inconsistencies and design flaws, including their mutability and some poorly chosen offsets, default naming.
 
 The new Date/Time Java API integrates many of the Joda-Time features.
 
